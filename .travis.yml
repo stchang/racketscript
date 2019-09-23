@@ -32,9 +32,9 @@ install:
   - make setup
   - make setup-extra
   - raco pkg install --auto cover-codecov
-  # install the expander as a pkg,
-  # needed for tests
-  - raco pkg install ${RACKET_DIR}/src/expander/
+  # install the expander as a pkg, needed for tests
+  - git clone https://github.com/racket/racket.git racket-expander
+  - raco pkg install racket-expander/racket/src/expander/
 
 script:
   - make unit-test
