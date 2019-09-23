@@ -298,7 +298,8 @@
            (~a (build-path fixture-module-dir p) "/*.rkt"))
          paths))
 
-  (run (fixture-path-patterns "racket-core"
+  (run (fixture-path-patterns "expander"
+                              "racket-core"
                               "test-the-test"
                               "basic"
                               "struct"

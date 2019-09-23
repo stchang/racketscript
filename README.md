@@ -1,9 +1,16 @@
 # RacketScript
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](COPYING.md)
-[![Build Status](https://travis-ci.org/vishesh/racketscript.svg?branch=master)](https://travis-ci.org/vishesh/racketscript)
+[![Build Status](https://travis-ci.org/stchang/racketscript.svg?branch=expander)](https://travis-ci.org/stchang/racketscript)
 [![Coverage Status](https://codecov.io/gh/vishesh/racketscript/coverage.svg?branch=master)](https://codecov.io/gh/vishesh/racketscript?branch=master)
 [![Try Online](https://img.shields.io/badge/try_it-online!-ff9900.svg)](http://rapture.twistedplane.com:8080)
+
+### `expander` branch
+
+This branch improves RacketScript so it can compile the Racket
+expander (in `src/expander/`), as a first step towards self-hosting.
+
+#### previously
 
 RacketScript is an **experimental** lightweight Racket to JavaScript
 compiler. The generated code is ES6, which can be translated to ES5

@@ -15,9 +15,6 @@ env:
     - RACKET_VERSION=RELEASE
     - RACKET_VERSION=7.4
     - RACKET_VERSION=7.0
-    - RACKET_VERSION=6.12
-    - RACKET_VERSION=6.8
-    - RACKET_VERSION=6.4
 
 matrix:
   allow_failures:
@@ -35,6 +32,9 @@ install:
   - make setup
   - make setup-extra
   - raco pkg install --auto cover-codecov
+  # install the expander as a pkg,
+  # needed for tests
+  - raco pkg install ${RACKET_DIR}/src/expander/
 
 script:
   - make unit-test
