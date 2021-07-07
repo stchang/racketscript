@@ -1,8 +1,0 @@
-{
-    "name": "racketscript",
-    "version": "0.0.1",
-    "dependencies": {
-        "gulp": "^4.0.2",
-        "google-closure-compiler": "*"
-    }
-}
