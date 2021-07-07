@@ -10,6 +10,7 @@
 .PHONY: test unit-test integration-test test
 .PHONY: coverage coverage-unit-test
 .PHONY: eslint eslint-fix
+.PHONY: docs
 
 ESLINT=node_modules/eslint/bin/eslint.js
 
@@ -78,3 +79,6 @@ integration-test:
 	@echo "    RACKETSCRIPT INTEGRATION TEST    "
 	@echo "++++++++++++++++++++++++++++++++"
 	raco test -t tests/fixture.rkt
+
+docs:
+	scribble --htmls +m --redirect-main https://docs.racket-lang.org --dest . --dest-name docs racketscript-doc/racketscript/scribblings/racketscript.scrbl
